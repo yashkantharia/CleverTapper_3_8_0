@@ -72,11 +72,14 @@
             <intent-filter>
                 <action android:name="com.clevertap.PUSH_EVENT"/>
             </intent-filter>
-            <!--Hotstar-->
-            <meta-data
-                android:name="CLEVERTAP_INTENT_SERVICE"
-                android:value="com.example.clevertapper.CustomIntentService" />
         </service>
+        <!--Push Template-->
+
+        <receiver
+            android:name="com.clevertap.pushtemplates.PushTemplateReceiver"
+            android:exported="false"
+            android:enabled="true">
+        </receiver>
 
         <!-- Push Amplification -->
         <meta-data
