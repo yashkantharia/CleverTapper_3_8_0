@@ -243,7 +243,10 @@ public class MainActivity extends AppCompatActivity implements DisplayUnitListen
     */
     }
 
+//Native Display Implementation below
 
+
+//onDisplayUnitsLoaded will help to fetch the various parameters recieved as a set of key-value pairs
     public void onDisplayUnitsLoaded(ArrayList<CleverTapDisplayUnit> units) {
         // you will get display units here
         for (int i = 0; i < units.size(); i++) {
@@ -255,7 +258,8 @@ public class MainActivity extends AppCompatActivity implements DisplayUnitListen
         }
     }
 
-
+//For Native Display exampl, the following Dialog will be shown when the Native Display Campaign is recieved by the user's device and it will show a dialog which can not be dismissed
+//This dialog can be used for force update
     private void showDialog(CleverTapDisplayUnit unit) {
 
         ArrayList<CleverTapDisplayUnitContent> tr = unit.getContents();
