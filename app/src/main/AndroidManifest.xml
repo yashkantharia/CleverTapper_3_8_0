@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_ct_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:label="Zeke 3.8"
+        android:label="Zeke"
         android:name="com.clevertap.android.sdk.Application" >
 
        <activity android:name=".SplashScreen"
@@ -31,6 +31,16 @@
 
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "zeke://ct” -->
+                <data android:scheme="zeke"
+                    android:host="ct" />
+                <data android:scheme="app" android:host="open.my.app" />
+            </intent-filter>
         </activity>
 
 
